@@ -1,0 +1,258 @@
+:root {
+    --verylightblue: #B3CDE0;
+    --lightblue: #6497B1;
+    --blue: #005B96;
+    --darkblue: #03396C;
+    --verydarkblue: #011F4B;
+    --whitesus : #F4F4F5;
+    --anothergray : #3D3D3D;
+  }
+
+.hidden{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.show{
+    opacity: 1;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    color : var(--anothergray)
+}
+
+/* navbar */
+nav{
+    background-color:var(--darkblue);
+    display: flex;
+    width: 100%;
+}
+
+nav li{
+    font-family: 'Bebas Neue', sans-serif;
+    list-style: none;
+    color : white;
+    font-size: 20px;
+    padding:0 40px;
+    display: inline-block;
+}
+
+nav li a{
+    color: inherit;
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 400ms, text-underline-offset 400ms;
+}
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+.topimg h5{
+    position: absolute;
+    color: var(--whitesus);
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    top: 9rem;
+
+    font-family: 'Quantico', sans-serif;
+    font-size: 100px;
+    text-shadow: 0px 0px 6px #000;
+}
+
+/* detail */
+.detail{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top{
+    margin-right: 5%;
+}
+
+.detail article h1{
+    font-size : 50px
+}
+
+.detail aside{
+    box-sizing: border-box;
+    border: 2px solid black; 
+    padding: 2%;
+    text-align: center;
+    align-items: center;
+}
+
+/* more-detail */
+.more-detail{
+    background-color: var(--whitesus);
+    display: flex;
+    padding: 5% 11%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.more-detail h1{
+    font-size: 40px;
+}
+
+.more-detail .list-equipment{
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    display: flex;
+}
+
+.more-detail .list-equipment li{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/* promo*/
+.promo {
+    text-align: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.promo h1{
+    font-size: 60px;
+}
+
+.promo .container {
+    display: flex;
+    margin : 5% 10%;
+    justify-content: space-between;
+}
+
+.promo .box{
+    background-color: var(--whitesus);
+    box-sizing: border-box;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    margin: 3% 28%;
+}
+
+.promo .agreement{
+    justify-content: center;
+    display: flex;
+}
+
+.promo .custombutton{
+    color : white;
+    background-color: var(--lightblue);
+    width: 20%;
+    margin : 0 auto;
+    padding: 8px;
+    transition: background-color 500ms;
+}
+
+.promo .custombutton:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+}
+/* footer */
+footer{
+    background-color: var(--whitesus);
+    padding: 3%;
+}
+
+footer h1{
+    font-size: 40px;
+}
+
+footer article{
+    width: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+footer .box{
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0% 5%;
+}
+
+footer p{
+    padding-top: 3%;
+    align-items: center;
+    text-align: center;
+}
+
+footer h4{
+    font-size: 23px;
+    font-weight: normal;
+}
+
+footer li{
+    font-family: 'Bebas Neue', sans-serif;
+    list-style: none;
+    color : var(--anothergray);
+    font-size: 23px;
+    padding:0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+footer li a{
+    color: inherit;
+    text-decoration: none;
+    padding: 0 100%;
+    transition: background-color 150ms;
+}
+
+footer li a:hover{
+    background-color: #e9e9e9;
+}
+
+@media screen and (max-width : 800px) {
+    .detail{
+        flex-direction: column  ;
+    }
+    #top{
+        padding-bottom: 50px;
+    }
+    .more-detail{
+        flex-direction: column;
+    }
+    .promo .box{
+        margin: 5% auto;
+        width: 80%;
+    }
+    .promo .agreement{
+        margin : auto;
+        width: 80%;
+    }
+    footer .box{
+        flex-direction: column;
+    }
+    footer .respon{
+        display: none;
+    }
+    footer li a{
+        padding:10px 200px;
+        font-size: 25px;
+    }
+}
